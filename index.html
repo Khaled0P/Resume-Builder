@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/172eafd941.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>CV Application</title>
+    <link rel="stylesheet" href="./src/index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="customize">
+        <div class="personal">
+          <h1>Personal Info</h1>
+          <form>
+            <label for="name"
+              >Full name <span class="required">required</span></label
+            >
+            <input type="text" id="name" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" />
+            <label for="phone">Phone number</label>
+            <input type="text" id="phone" />
+            <label for="address">Address</label>
+            <input type="text" id="address" />
+            <div class="buttonGroup">
+              <button class="cancel">cancel</button>
+              <button class="submit">submit</button>
+            </div>
+          </form>
+        </div>
+        <div class="education">
+          <h1>Education</h1>
+          <form>
+            <label for="institution">
+              Institution <span class="required">required</span>
+            </label>
+            <input type="text" id="institution" required />
+            <label for="degree">
+              Degree <span class="required">required</span>
+            </label>
+            <input type="text" id="degree" required />
+            <label for="startDate">Start date</label>
+            <input type="date" id="startDate" />
+            <label for="endDate">End date</label>
+            <input type="date" id="endDate" />
+            <div class="buttonGroup">
+              <button class="cancel">cancel</button>
+              <button class="submit">submit</button>
+            </div>
+          </form>
+        </div>
+        <div class="experience">
+          <h1>Experience</h1>
+          <form>
+            <label for="company">
+              Company name <span class="required">required</span>
+            </label>
+            <input type="text" id="company" required />
+            <label for="position"
+              >Position title <span class="required">required</span></label
+            >
+            <input type="email" id="position" required />
+            <label for="startDate">Start date</label>
+            <input type="date" id="startDate" />
+            <label for="endDate">End date</label>
+            <input type="date" id="endDate" />
+            <label for="location"> location </label>
+            <input type="text" id="location" />
+            <label for="description">Description</label>
+            <textarea id="description"></textarea>
+            <div class="buttonGroup">
+              <button class="cancel">cancel</button>
+              <button class="submit">submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="template">
+        <div class="personal">
+          <h1>John Smith</h1>
+          <div class="info">
+            <div class="email">
+              <i class="fa-solid fa-envelope" style="color: #ffffff"></i>
+              maxmlller12@gmall.com
+            </div>
+            <div class="number">
+              <i class="fa-solid fa-phone" style="color: #ffffff"></i>
+              07123456789
+            </div>
+            <div class="address">
+              <i class="fa-solid fa-location-dot" style="color: #ffffff"></i>
+              London
+            </div>
+          </div>
+        </div>
+        <div class="education">
+          <h2>Education</h2>
+          <div class="content">
+            <div class="main">
+              <p><span class="bold">London City University</span></p>
+              <p>Bachelors in Economics</p>
+            </div>
+            <div class="secondary">
+              <p>08/2020 – present</p>
+              <p>New York City, US</p>
+            </div>
+          </div>
+        </div>
+        <div class="experience">
+          <h2>Experience</h2>
+          <div class="content">
+            <div class="main">
+              <p><span class="bold">Umbrella Inc.</span></p>
+              <p>UX & UI Designer</p>
+              <p>
+                Designed and prototyped user interface patterns for various
+                clients in various industries, ranging from self-service apps
+                within the telecommunications-sector to mobile games for IOS and
+                Android
+              </p>
+            </div>
+            <div class="secondary">
+              <p>08/2020 – present</p>
+              <p>New York City, US</p>
+            </div>
+          </div>
+          <div class="content">
+            <div class="main">
+              <p><span class="bold">Black Mesa Labs</span></p>
+              <p>UX Research Assistant</p>
+              <p>
+                Supported senior researchers on accessibility standards for the
+                open web. Created and usability tested wireframes and
+                prototypes. Produced interactive documentation for quick
+                onboarding of new researchers.
+              </p>
+            </div>
+            <div class="secondary">
+              <p>04/2018 – 02/2019</p>
+              <p>New York City, US</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
