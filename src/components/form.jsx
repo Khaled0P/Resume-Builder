@@ -1,7 +1,15 @@
 import { Fragment } from 'react';
 import '../styles/form.css';
 
-export default function AppForm({ list }) {
+export default function AppForm({ list, setData }) {
+  let fieldValue;
+  function handleOnChange(e) {
+    const property = e.target.className;
+    const newData = {};
+    fieldValue = e.target.value;
+    newData[property] = fieldValue;
+    setData(newData);
+  }
   const formItems = list.map((field) => (
     <Fragment key={field.id}>
       <label htmlFor={field.id}>
@@ -11,7 +19,12 @@ export default function AppForm({ list }) {
       {field.type === 'textarea' ? (
         <textarea id={field.id}></textarea>
       ) : (
-        <input type={field.type} required={field.required} />
+        <input
+          className={field.id}
+          type={field.type}
+          required={field.required}
+          onChange={handleOnChange}
+        />
       )}
     </Fragment>
   ));

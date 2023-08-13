@@ -11,10 +11,16 @@ import Template from './components/template';
 
 function App() {
   const [useDefaulTemp, setUseDefaultTemp] = useState(true);
+  const [currentData, setCurrentData] = useState({});
+
   return (
     <>
-      <Customize control={setUseDefaultTemp} />
-      <Template useDefaulTemp={useDefaulTemp} />
+      <Customize
+        control={setUseDefaultTemp}
+        setData={setCurrentData}
+        data={currentData}
+      />
+      <Template useDefaulTemp={useDefaulTemp} data={currentData} />
     </>
   );
 }
