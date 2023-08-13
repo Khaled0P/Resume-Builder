@@ -1,0 +1,21 @@
+h2 {
+    background-color: #eef1f3;
+    color: #0e374e;
+    margin-bottom: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+.template .content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 2rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.template .secondary {
+    min-width: 150px;
+    margin-bottom: 24px;
+}

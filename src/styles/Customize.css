@@ -1,0 +1,7 @@
+.customize {
+    flex-grow: 1;
+}
+
+.customize h1 {
+    margin-bottom: 10px;
+}

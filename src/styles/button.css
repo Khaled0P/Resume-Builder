@@ -1,0 +1,30 @@
+button {
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 0.6em 1.2em;
+    margin-top: 15px;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transform: translateY(0);
+    white-space: nowrap;
+}
+
+.submit:hover {
+    transition: filter .3s;
+    filter: brightness(110%);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.cancel:hover {
+    background-color: #f0544e;
+}
+
+.submit {
+    background-color: #0e374e;
+    color: white;
+}

@@ -1,0 +1,12 @@
+.template {
+    width: 70%;
+    max-height: max-content;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+}
+
+.education,
+.experience {
+    margin-top: 2rem;
+    padding: 15px 40px;
+}

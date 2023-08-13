@@ -1,0 +1,12 @@
+.container {
+    background-color: #fff;
+    margin-bottom: 1.5rem;
+    padding: 1.6rem;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-around;
+}
