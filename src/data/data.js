@@ -8,8 +8,8 @@ export const personalFieldInfo = [
 export const educationFieldInfo = [
   { name: 'Institution', id: 'institution', type: 'text', required: true },
   { name: 'Degree', id: 'degree', type: 'text', required: true },
-  { name: 'Start date', id: 'startDate', type: 'date' },
-  { name: 'End date', id: 'endDate', type: 'date' },
+  { name: 'Start date', id: 'degreeStartDate', type: 'date' },
+  { name: 'End date', id: 'degreeEndDate', type: 'date' },
 ];
 
 export const experienceFieldInfo = [
@@ -27,7 +27,7 @@ export const defaulTemp = {
   phone: '07123456789',
   address: 'London, UK',
   degree: 'Bachelors in Economics',
-  university: 'London City University',
+  institution: 'London City University',
   universityLocation: 'New York City, US',
   degreeStartDate: '08/2020',
   degreeEndDate: 'present',

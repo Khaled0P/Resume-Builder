@@ -1,14 +1,21 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
+import Button from './button';
 import '../styles/form.css';
 
-export default function AppForm({ list, setData }) {
-  let fieldValue;
+export default function AppForm({ list, setData, data }) {
+  const [prevData, setPrevData] = useState(data);
+
   function handleOnChange(e) {
-    const property = e.target.className;
-    const newData = {};
-    fieldValue = e.target.value;
-    newData[property] = fieldValue;
-    setData(newData);
+    const property = e.target.name;
+    setData({ ...data, [property]: e.target.value });
+  }
+
+  function handleSubmit(e) {
+    setPrevData(data);
+    e.preventDefault();
+  }
+  function handleCancel() {
+    setData(prevData);
   }
   const formItems = list.map((field) => (
     <Fragment key={field.id}>
@@ -20,7 +27,7 @@ export default function AppForm({ list, setData }) {
         <textarea id={field.id}></textarea>
       ) : (
         <input
-          className={field.id}
+          name={field.id}
           type={field.type}
           required={field.required}
           onChange={handleOnChange}
@@ -29,5 +36,13 @@ export default function AppForm({ list, setData }) {
     </Fragment>
   ));
 
-  return <form>{formItems}</form>;
+  return (
+    <form>
+      {formItems}
+      <div className="buttonGroup">
+        <Button name={'cancel'} onClick={handleCancel} />
+        <Button name={'submit'} onClick={handleSubmit} />
+      </div>
+    </form>
+  );
 }

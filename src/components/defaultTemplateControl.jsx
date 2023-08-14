@@ -16,12 +16,12 @@ export default function DefaultTemplateControl({ control }) {
         name="Clear Resume"
         icon={trashIcon}
         className="clear"
-        handleOnClick={clearDefaultTemplate}
+        onClick={clearDefaultTemplate}
       />
       <Button
         name="Load Example"
         className="useDefault"
-        handleOnClick={useDefaultTemplate}
+        onClick={useDefaultTemplate}
       />
     </div>
   );

@@ -18,7 +18,7 @@ export default function Template({ useDefaulTemp, data }) {
         <TemplateSection
           title={data.degree || (useDefaulTemp && defaulTemp.degree)}
           organization={
-            data.university || (useDefaulTemp && defaulTemp.university)
+            data.institution || (useDefaulTemp && defaulTemp.institution)
           }
           location={
             data.universityLocation ||
@@ -28,7 +28,9 @@ export default function Template({ useDefaulTemp, data }) {
             data.degreeStartDate ||
             (useDefaulTemp && defaulTemp.degreeStartDate)
           }
-          endDate={data.deg || (useDefaulTemp && defaulTemp.degreeEndDate)}
+          endDate={
+            data.degreeEndDate || (useDefaulTemp && defaulTemp.degreeEndDate)
+          }
         />
       </div>
       <div className="experience">
