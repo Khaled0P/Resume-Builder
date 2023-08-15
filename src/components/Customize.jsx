@@ -7,7 +7,15 @@ import {
   experienceFieldInfo,
 } from '../data/data';
 
-export default function Customize({ control, setData, data }) {
+export default function Customize({
+  control,
+  setData,
+  data,
+  setEducation,
+  setExperience,
+  education,
+  experience,
+}) {
   return (
     <div className="customize">
       <DefaultTemplateControl control={control} />
@@ -20,14 +28,14 @@ export default function Customize({ control, setData, data }) {
       <AppSection
         fieldName="Education"
         list={educationFieldInfo}
-        setData={setData}
-        data={data}
+        setData={setEducation}
+        data={education}
       />
       <AppSection
         fieldName="Experience"
         list={experienceFieldInfo}
-        setData={setData}
-        data={data}
+        setData={setExperience}
+        data={experience}
       />
     </div>
   );

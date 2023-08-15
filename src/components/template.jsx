@@ -9,7 +9,6 @@ export default function Template({
   education,
   experience,
 }) {
-  // eslint-disable-next-line no-unused-vars
   return (
     <div className="template">
       <TemplatePersonal
@@ -20,9 +19,12 @@ export default function Template({
       />
 
       <div className="education">
-        {useDefaulTemp && <h2>Education</h2>}
+        {(useDefaulTemp || education.length !== 0) && <h2>Education</h2>}
 
-        {(education || (useDefaulTemp ? defaultEducation : [])).map((item) => {
+        {(
+          (education.length && education) ||
+          (useDefaulTemp ? defaultEducation : [])
+        ).map((item) => {
           return (
             <TemplateSection
               key={item.degree}
@@ -37,22 +39,23 @@ export default function Template({
       </div>
 
       <div className="experience">
-        {(useDefaulTemp || experience) && <h2>Experience</h2>}
-        {(experience || (useDefaulTemp ? defaultExperience : [])).map(
-          (field) => {
-            return (
-              <TemplateSection
-                key={field.jobTitle}
-                title={field.jobTitle}
-                organization={field.jobOrganization}
-                location={field.jobLocation}
-                startDate={field.jobStartDate}
-                endDate={field.jobEndtDate}
-                description={field.jobDescription}
-              />
-            );
-          }
-        )}
+        {(useDefaulTemp || experience.length !== 0) && <h2>Experience</h2>}
+        {(
+          (experience.length && experience) ||
+          (useDefaulTemp ? defaultExperience : [])
+        ).map((field) => {
+          return (
+            <TemplateSection
+              key={field.position}
+              title={field.position}
+              organization={field.company}
+              location={field.location}
+              startDate={field.startDate}
+              endDate={field.endtDate}
+              description={field.description}
+            />
+          );
+        })}
       </div>
     </div>
   );

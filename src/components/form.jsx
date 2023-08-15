@@ -4,19 +4,39 @@ import '../styles/form.css';
 
 export default function AppForm({ list, setData, data }) {
   const [prevData, setPrevData] = useState(data);
-
+  const [resumeSection, setResumeSection] = useState({});
+  const formInputs = document.querySelectorAll('form input');
   function handleOnChange(e) {
     const property = e.target.name;
-    setData({ ...data, [property]: e.target.value });
+    if (Array.isArray(data)) {
+      setResumeSection({ ...resumeSection, [property]: e.target.value });
+    } else {
+      setData({ ...data, [property]: e.target.value });
+    }
   }
 
-  function handleSubmit(e) {
-    setPrevData(data);
-    e.preventDefault();
+  function handleSubmit() {
+    if (Array.isArray(data)) {
+      setData([...data, resumeSection]);
+      setResumeSection({});
+    } else {
+      setPrevData(data);
+    }
+    formInputs.forEach((input) => {
+      input.value = '';
+    });
   }
+
   function handleCancel() {
+    if (Array.isArray(data)) {
+      setResumeSection({});
+    }
     setData(prevData);
+    formInputs.forEach((input) => {
+      input.value = '';
+    });
   }
+
   const formItems = list.map((field) => (
     <Fragment key={field.id}>
       <label htmlFor={field.id}>

@@ -8,6 +8,7 @@ export const personalFieldInfo = [
 export const educationFieldInfo = [
   { name: 'Institution', id: 'institution', type: 'text', required: true },
   { name: 'Degree', id: 'degree', type: 'text', required: true },
+  { name: 'Location', id: 'universityLocation', type: 'text', required: true },
   { name: 'Start date', id: 'degreeStartDate', type: 'month' },
   { name: 'End date', id: 'degreeEndDate', type: 'month' },
 ];
@@ -15,9 +16,9 @@ export const educationFieldInfo = [
 export const experienceFieldInfo = [
   { name: 'Company', id: 'company', type: 'text', required: true },
   { name: 'Position', id: 'position', type: 'text', required: true },
+  { name: 'Location', id: 'location', type: 'text' },
   { name: 'Start date', id: 'startDate', type: 'month' },
   { name: 'End date', id: 'endDate', type: 'month' },
-  { name: 'Location', id: 'location', type: 'text' },
   { name: 'Description', id: 'description', type: 'textarea' },
 ];
 
@@ -39,25 +40,25 @@ export const defaultEducation = [
 ];
 export const defaultExperience = [
   {
-    jobTitle: 'UX & UI Designer',
-    jobOrganization: 'Umbrella Inc.',
-    jobLocation: 'New York City, US',
-    jobDescription: `Designed and prototyped user interface patterns for various
+    position: 'UX & UI Designer',
+    company: 'Umbrella Inc.',
+    location: 'New York City, US',
+    description: `Designed and prototyped user interface patterns for various
                         clients in various industries, ranging from self-service apps
                         within the telecommunications-sector to mobile games for IOS and
                         Android`,
-    jobStartDate: '08/2020',
-    jobEndtDate: 'present',
+    startDate: '08/2020',
+    endtDate: 'present',
   },
   {
-    jobTitle: 'Research Assistant',
-    jobOrganization: 'Black Mesa Labs',
-    jobLocation: 'New York City, US',
-    jobDescription: `Supported senior researchers on accessibility standards for the
+    position: 'Research Assistant',
+    company: 'Black Mesa Labs',
+    location: 'New York City, US',
+    description: `Supported senior researchers on accessibility standards for the
                          open web. Created and usability tested wireframes and
                          prototypes. Produced interactive documentation for quick
                          onboarding of new researchers.`,
-    jobStartDate: '04/2018',
-    jobEndtDate: '02/2019',
+    startDate: '04/2018',
+    endtDate: '02/2019',
   },
 ];

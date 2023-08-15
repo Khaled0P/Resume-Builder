@@ -12,15 +12,26 @@ import Template from './components/template';
 function App() {
   const [useDefaulTemp, setUseDefaultTemp] = useState(true);
   const [currentData, setCurrentData] = useState({});
+  const [education, setEducation] = useState([]);
+  const [experience, setExperience] = useState([]);
 
   return (
     <>
       <Customize
         control={setUseDefaultTemp}
         setData={setCurrentData}
+        setEducation={setEducation}
+        setExperience={setExperience}
+        education={education}
+        experience={experience}
         data={currentData}
       />
-      <Template useDefaulTemp={useDefaulTemp} data={currentData} />
+      <Template
+        useDefaulTemp={useDefaulTemp}
+        data={currentData}
+        education={education}
+        experience={experience}
+      />
     </>
   );
 }
