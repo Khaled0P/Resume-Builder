@@ -6,6 +6,11 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
 }
 
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 1.7em;
+}
+
 .buttonGroup {
     display: flex;
     justify-content: space-around;
