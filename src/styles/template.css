@@ -10,3 +10,23 @@
     margin-top: 2rem;
     padding: 15px 40px;
 }
+
+.field {
+    position: relative;
+}
+
+.field button {
+    position: absolute;
+    border: none;
+    background: none;
+    margin-top: 0;
+    padding: 0;
+    top: 0;
+    left: 50%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.field:hover button {
+    opacity: 1;
+}

@@ -31,6 +31,8 @@ function App() {
         data={currentData}
         education={education}
         experience={experience}
+        setEducation={setEducation}
+        setExperience={setExperience}
       />
     </>
   );
