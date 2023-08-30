@@ -1,17 +1,62 @@
 .container {
     background-color: #fff;
-    margin-bottom: 1.5rem;
-    padding: 1.6rem;
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+    margin-bottom: 1.5rem;
+    padding: 1.6rem;
 }
 
-.container h2 {
-    margin-bottom: 20px;
+.header h2 {
     font-size: 1.7em;
+    position: relative;
 }
 
 .buttonGroup {
     display: flex;
     justify-content: space-around;
+}
+
+.container .dropDownBtn {
+    padding: 0;
+    margin-top: 0;
+    border: none;
+    background: none;
+
+    position: absolute;
+    right: 10px;
+    top: 0;
+    transform: rotate(0);
+    transition: transform .3s ease-in-out;
+}
+
+
+.container button svg {
+    height: .75em;
+}
+
+.container form {
+    display: none;
+}
+
+.dropDown h2 {
+    margin-bottom: 20px;
+}
+
+.container.dropDown .dropDownBtn {
+    transform: rotate(180deg);
+}
+
+.container.dropDown form {
+    display: flex;
+}
+
+.container.dropDown .dropDownForm {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.container .dropDownForm {
+    transform: translateY(-20px);
+    opacity: .5;
+    transition: transform .25s ease-in-out, opacity .25s ease-in-out;
 }
